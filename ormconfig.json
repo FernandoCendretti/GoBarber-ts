@@ -1,14 +1,13 @@
 {
-    "type":"postgres",
-    "host":"localhost",
+    "type": "postgres",
+    "host": "localhost",
     "port": 5432,
     "username": "postgres",
-    "password":"docker",
-    "database":"db-gobarber",
-    "migrations": [
-        "./src/database/migrations/*.ts"
-    ],
+    "password": "docker",
+    "database": "db-gobarber",
+    "entities": ["./src/models/*ts"],
+    "migrations": ["./src/database/migrations/*.ts"],
     "cli": {
-        "migrationsDir":"./src/database/migrations"
+        "migrationsDir": "./src/database/migrations"
     }
 }
