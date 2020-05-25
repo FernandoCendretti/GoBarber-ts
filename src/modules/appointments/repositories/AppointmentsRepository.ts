@@ -1,10 +1,5 @@
 import { Repository, EntityRepository } from 'typeorm';
-import Appointment from '../models/Appointment';
-
-interface CreateAppointmentsDTO {
-    provider: string;
-    date: Date;
-}
+import Appointment from '../infra/typeorm/entities/Appointment';
 
 @EntityRepository(Appointment)
 class AppointmentsRepository extends Repository<Appointment> {
