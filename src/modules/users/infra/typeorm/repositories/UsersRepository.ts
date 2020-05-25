@@ -28,6 +28,8 @@ class UsersRepository implements IUserRepository {
 
         await this.ormRespository.save(user);
 
+        delete user.password;
+
         return user;
     }
 
